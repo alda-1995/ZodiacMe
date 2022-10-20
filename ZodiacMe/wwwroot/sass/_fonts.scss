@@ -1,0 +1,11 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+$font-lato: 'Lato', sans-serif;
+
+
+h1, .h1{
+    font-family: $font-lato;
+    font-size: 42px;
+    line-height: normal;
+    letter-spacing: normal;
+}

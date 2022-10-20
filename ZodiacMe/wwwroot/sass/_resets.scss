@@ -1,0 +1,36 @@
+﻿/*----------  RESET  ----------*/
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.grid-container {
+    width: 100%;
+    max-width: 95%;
+
+    /* Large and up */
+    @media screen and (min-width: 64em) {
+        max-width: 90%;
+    }
+    /* Medium only */
+    @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+        max-width: 92%;
+    }
+}
