@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZodiacMe", "ZodiacMe\ZodiacMe.csproj", "{0E097F22-82C4-4E55-A05B-654A8A70ED29}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZodiacMe", "ZodiacMe\ZodiacMe.csproj", "{0E097F22-82C4-4E55-A05B-654A8A70ED29}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZodiacMe.Datos", "ZodiacMe.Datos\ZodiacMe.Datos.csproj", "{F86AAE51-2150-4AD8-BB91-65D945AB3D3B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{0E097F22-82C4-4E55-A05B-654A8A70ED29}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E097F22-82C4-4E55-A05B-654A8A70ED29}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E097F22-82C4-4E55-A05B-654A8A70ED29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F86AAE51-2150-4AD8-BB91-65D945AB3D3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F86AAE51-2150-4AD8-BB91-65D945AB3D3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F86AAE51-2150-4AD8-BB91-65D945AB3D3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F86AAE51-2150-4AD8-BB91-65D945AB3D3B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
