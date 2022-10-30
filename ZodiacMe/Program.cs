@@ -1,7 +1,11 @@
+using Microsoft.EntityFrameworkCore;
+using ZodiacMe.BD;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<BdContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("conexion")));
 
 var app = builder.Build();
 
