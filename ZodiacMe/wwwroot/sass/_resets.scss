@@ -1,7 +1,9 @@
-﻿/*----------  RESET  ----------*/
+﻿
+/*----------  RESET  ----------*/
 *,
 *::after,
 *::before {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -19,12 +21,27 @@ body {
 
 body {
     overflow-x: hidden;
+    background-color: $azul;
+    // background: rgb(2,0,36);
+    // background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(6,80,168,1) 0%, rgba(0,189,255,1) 100%);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
 }
 
 .grid-container {
     width: 100%;
     max-width: 95%;
-
+    margin: 0 auto;
+    /* Big up */
+    @media only screen and (min-width: 1920px) {
+        max-width: 1360px !important;
+    }
     /* Large and up */
     @media screen and (min-width: 64em) {
         max-width: 90%;

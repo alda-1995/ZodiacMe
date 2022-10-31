@@ -1,0 +1,28 @@
+﻿.button-blue {
+    background-color: $azul;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    padding: 0.5rem 2rem;
+    color: $blanco;
+    border-radius: 15px;
+    transition: all 300ms;
+    border: none;
+    cursor: pointer;
+
+    &:hover, &:focus {
+        background-color: $crema;
+        color: $negro;
+        transform: scale(1.05);
+    }
+}
+
+.link-blue {
+    color: $azul;
+    transition: all;
+
+    &:hover, &:focus {
+        color: $crema;
+    }
+}

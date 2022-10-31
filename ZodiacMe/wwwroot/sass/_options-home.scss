@@ -1,0 +1,48 @@
+﻿.flex-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .card-option:first-child {
+        margin-right: 2.5rem;
+    }
+}
+
+.card-option {
+    text-decoration: none;
+    height: 220px;
+    width: 40%;
+    max-width: 400px;
+    position: relative;
+    box-shadow: 8px -8px 30px $blanco;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    animation: glow 4s infinite alternate;
+    background-color: $crema;
+
+    .title-option {
+        color: $azul;
+    }
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 8px -8px 30px $blanco;
+    }
+
+    50% {
+        box-shadow: 0 8px 30px $blanco;
+    }
+
+    75% {
+        box-shadow: -8px 8px 30px $blanco;
+    }
+
+    100% {
+        box-shadow: -8px -8px 30px $blanco;
+    }
+}

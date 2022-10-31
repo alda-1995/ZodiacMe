@@ -1,0 +1,59 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+$fontGeneral: 'Ubuntu', sans-serif;
+
+h1 {
+    font-family: $fontGeneral;
+    font-size: 38px;
+    font-weight: normal;
+    line-height: 1;
+    letter-spacing: normal;
+}
+
+h2 {
+    font-family: $fontGeneral;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: normal;
+}
+
+h3 {
+    font-family: $fontGeneral;
+    font-size: 22px;
+    font-weight: normal;
+    line-height: 1;
+    letter-spacing: normal;
+}
+
+.font-title-general {
+    font-family: $fontGeneral;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+}
+
+.font-small {
+    font-family: $fontGeneral;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+}
+
+.font-input {
+    font-family: $fontGeneral;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+}
+
+p {
+    font-family: $fontGeneral;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: normal;
+    margin-bottom: 1rem;
+}

@@ -16,11 +16,13 @@ namespace ZodiacMe.BD.Modelos
         [Key]
         public Guid UsuarioId { get; set; }
         [Required]
-        public string Correo { get; set; }
+        public string Email { get; set; }
         [Required]
         public string Password { get; set; }
 
         public byte RolId { get; set; }
         public Rol Rol { get; set; }
+
+        public ICollection<Signo> Signos { get; set; }
     }
 }

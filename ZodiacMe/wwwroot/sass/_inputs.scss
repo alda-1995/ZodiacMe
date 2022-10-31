@@ -1,0 +1,14 @@
+﻿.form-container {
+    display: flex;
+    flex-direction: column;
+
+    label {
+        margin-bottom: 0.5rem;
+    }
+}
+
+.input-date {
+    padding: 1rem;
+    border: 1px solid $azul;
+    margin-bottom: 1rem;
+}

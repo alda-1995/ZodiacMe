@@ -1,0 +1,33 @@
+﻿nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    .inner-nav {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* Large and up */
+        @media screen and (min-width: 64em) {
+            height: 100px;
+        }
+    }
+
+    .logo-zodiac {
+        width: 90px;
+        height: 80px;
+        display: inline-block;
+
+        svg {
+            width: 100%;
+            height: 100%;
+            fill: $blanco;
+
+            g {
+                fill: $blanco;
+            }
+        }
+    }
+}

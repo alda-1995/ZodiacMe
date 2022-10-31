@@ -1,0 +1,69 @@
+﻿.detalle-horoscopo {
+    width: 50%;
+    margin: 0 auto;
+    max-width: 600px;
+    background-color: $blanco;
+    border: 1px solid #DFDFDF;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .header-horoscopo {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+
+        .circle-icon {
+            flex-shrink: 0;
+            width: 200px;
+            margin-right: 2rem;
+        }
+
+        .title-horoscopo {
+            color: $azul;
+        }
+    }
+
+    .text-horoscopo {
+        margin-bottom: 2rem;
+    }
+
+    .compatibilidad-grid {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .title-compatibilidad-general {
+            color: $azul;
+            margin-bottom: 2rem;
+        }
+
+        .grid-row {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 8px;
+
+            .row-compatibilidad {
+                grid-column-start: span 4;
+                margin-bottom: 1rem;
+
+                .content-row {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .icon-signo {
+                        width: 80%;
+                        margin-bottom: 1rem;
+                    }
+
+                    .title-compatibilidad {
+                        color: $azul;
+                    }
+                }
+            }
+        }
+    }
+}
