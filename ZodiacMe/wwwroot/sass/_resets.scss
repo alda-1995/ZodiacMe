@@ -33,21 +33,3 @@ a {
 img {
     max-width: 100%;
 }
-
-.grid-container {
-    width: 100%;
-    max-width: 95%;
-    margin: 0 auto;
-    /* Big up */
-    @media only screen and (min-width: 1920px) {
-        max-width: 1360px !important;
-    }
-    /* Large and up */
-    @media screen and (min-width: 64em) {
-        max-width: 90%;
-    }
-    /* Medium only */
-    @media screen and (min-width: 40em) and (max-width: 63.9375em) {
-        max-width: 92%;
-    }
-}

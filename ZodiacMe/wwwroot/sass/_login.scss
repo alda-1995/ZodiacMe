@@ -1,0 +1,14 @@
+﻿.login-container{
+    min-height: 100vh;
+    padding: 100px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .form-container{
+        width: 500px;
+        background-color: $blanco;
+        padding: 2rem;
+        border-radius: 20px;
+    }
+}
