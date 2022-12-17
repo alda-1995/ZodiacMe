@@ -12,8 +12,8 @@ using ZodiacMe.BD;
 namespace ZodiacMe.BD.Migrations
 {
     [DbContext(typeof(BdContext))]
-    [Migration("20221122035005_Init")]
-    partial class Init
+    [Migration("20221217211200_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
