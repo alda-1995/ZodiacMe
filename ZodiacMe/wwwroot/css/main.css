@@ -246,9 +246,6 @@ p {
   background-color: #ffffff;
   border: 1px solid #DFDFDF;
   padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
 }
 
 .form-container {

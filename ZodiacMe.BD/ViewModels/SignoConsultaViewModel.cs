@@ -9,6 +9,11 @@ namespace ZodiacMe.BD.ViewModels
 {
     public class SignoConsultaViewModel
     {
-        public DateTime FechaNacimiento { get; set; }
+        [Required(ErrorMessage = "El mes es requerido")]
+        [Display(Name = "Mes")]
+        public int Mes { get; set; }
+        [Required(ErrorMessage = "El dia es requerido")]
+        [Display(Name = "Dia")]
+        public int Dia { get; set; }
     }
 }

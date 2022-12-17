@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 using ZodiacMe.BD.ViewModels;
 using ZodiacMe.Datos.Interfaces;
@@ -17,12 +18,14 @@ namespace ZodiacMe.Controllers
             _hostEnvironment = hostEnvironment;
         }
 
+        [Authorize(Roles = "Administrador")]
         public async Task<IActionResult> Index()
         {
             var listSignos = await _signo.ObtenerSignos();
             return View(listSignos);
         }
 
+        [Authorize(Roles = "Administrador")]
         public IActionResult Crear()
         {
             return View();
@@ -53,7 +56,8 @@ namespace ZodiacMe.Controllers
             ModelState.AddModelError("", "Error al guardar los datos.");
             return View(signoViewModel);
         }
-        
+
+        [Authorize(Roles = "Administrador")]
         [HttpGet]
         public async Task<IActionResult> Actualizar(string id)
         {
@@ -86,13 +90,14 @@ namespace ZodiacMe.Controllers
         {
             if (ModelState.IsValid)
             {
-                var signoId = await _signo.ConsultaSignoNacimiento(signoConsultaViewModel);
-                if (signoId != Guid.Empty || signoId != null)
+                var fechaSigno = new DateTime(1990, signoConsultaViewModel.Mes, signoConsultaViewModel.Dia);
+                var signoId = await _signo.ConsultaSignoNacimiento(fechaSigno);
+                if (signoId != Guid.Empty && signoId != null)
                 {
                     return RedirectToAction("Index", "Signo");
                 }
             }
-            ModelState.AddModelError("", "Verifica tus datos.");
+            ModelState.AddModelError("", "No se encontraron resultados.");
             return View(signoConsultaViewModel);
         }
     }

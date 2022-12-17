@@ -24,13 +24,15 @@ namespace ZodiacMe.Datos.Servicios
         {
             try
             {
+                var dateSetNewInicio = new DateTime(1990, signo.FechaInicio.Month, signo.FechaInicio.Day);
+                var dateSetNewFin = new DateTime(1990, signo.FechaFin.Month, signo.FechaFin.Day);
                 var signoUpdate = await _bdContext.Signos.FirstOrDefaultAsync(s => s.SignoId == signo.SignoId);
                 if (signoUpdate == null)
                     return false;
                 signoUpdate.Nombre = signo.Nombre;
                 signoUpdate.Descripcion = signo.Descripcion;
-                signoUpdate.FechaInicio = signo.FechaInicio;
-                signoUpdate.FechaFin = signo.FechaFin;
+                signoUpdate.FechaInicio = dateSetNewInicio;
+                signoUpdate.FechaFin = dateSetNewFin;
                 await _bdContext.SaveChangesAsync();
                 return true;
             }
@@ -40,14 +42,14 @@ namespace ZodiacMe.Datos.Servicios
             }
         }
 
-        public async Task<Guid?> ConsultaSignoNacimiento(SignoConsultaViewModel signo)
+        public async Task<Guid?> ConsultaSignoNacimiento(DateTime fechaNacimiento)
         {
             try
             {
                 var signoId = await _bdContext.Signos
                     .FirstOrDefaultAsync(s =>
-                    s.FechaInicio >= signo.FechaNacimiento &&
-                    s.FechaFin <= signo.FechaNacimiento);
+                    fechaNacimiento >= s.FechaInicio &&
+                    fechaNacimiento <= s.FechaFin);
                 return signoId?.SignoId;
             }
             catch
@@ -60,13 +62,15 @@ namespace ZodiacMe.Datos.Servicios
         {
             try
             {
+                var dateSetNewInicio = new DateTime(1990, signo.FechaInicio.Month, signo.FechaInicio.Day);
+                var dateSetNewFin = new DateTime(1990,signo.FechaFin.Month, signo.FechaFin.Day);
                 var signoCrear = new Signo()
                 {
                     SignoId = Guid.NewGuid(),
                     Nombre = signo.Nombre,
                     Descripcion = signo.Descripcion,
-                    FechaInicio = signo.FechaInicio,
-                    FechaFin = signo.FechaFin,
+                    FechaInicio = dateSetNewInicio,
+                    FechaFin = dateSetNewFin,
                     PathImagen = pathFile,
                     UsuarioId = signo.usuarioId
                 };

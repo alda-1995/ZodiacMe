@@ -14,6 +14,6 @@ namespace ZodiacMe.Datos.Interfaces
         public Task<bool> CrearSigno(SignoViewModel signo, string pathFile);
         public Task<SignoEditViewModel?> ObtieneSigno(Guid idSigno);
         public Task<bool> ActualizarSigno(SignoEditViewModel signo);
-        public Task<Guid?> ConsultaSignoNacimiento(SignoConsultaViewModel signo);
+        public Task<Guid?> ConsultaSignoNacimiento(DateTime fechaNacimiento);
     }
 }

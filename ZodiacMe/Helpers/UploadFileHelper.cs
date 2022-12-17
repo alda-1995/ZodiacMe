@@ -26,7 +26,7 @@ namespace ZodiacMe.Helpers
                 }
                 return fileName;
             }
-            catch (Exception ex)
+            catch
             {
                 return string.Empty;
             }
