@@ -14,5 +14,7 @@ namespace ZodiacMe.BD.Modelos
         }
         public Guid ParejaId { get; set; }
         public string Descripcion { get; set; }
+        public Guid SignoId { get; set; }
+        public Signo Signo { get; set; }
     }
 }

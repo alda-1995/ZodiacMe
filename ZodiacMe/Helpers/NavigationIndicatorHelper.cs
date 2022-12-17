@@ -19,11 +19,11 @@ namespace ZodiacMe.Helpers
                         return result;
                     }
                 }
-                return null;
+                return string.Empty;
             }
             catch (Exception)
             {
-                return null;
+                return string.Empty;
             }
         }
     }

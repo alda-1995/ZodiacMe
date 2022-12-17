@@ -1,0 +1,44 @@
+﻿@model ZodiacMe.BD.ViewModels.SignoEditViewModel;
+@{
+    ViewData["Title"] = "Actualizar";
+    Layout = "~/Views/Shared/AdminLTE/_Layout.cshtml";
+}
+
+<form method="post" asp-controller="Signo" class="form-general" enctype="multipart/form-data">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="p-blue mb-4">Actualizar Signo</h2>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+           <input asp-for="SignoId" type="hidden" class="form-control">
+            <div class="form-inputs mb-3">
+                <label asp-for="Nombre">Nombre</label>
+                <input asp-for="Nombre" type="text" class="form-control">
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-inputs mb-3">
+                <label asp-for="Descripcion">Descripción</label>
+                <textarea asp-for="Descripcion" class="form-control"></textarea>
+                <span asp-validation-for="Descripcion" class="text-danger"></span>
+            </div>
+            <div class="form-inputs mb-3">
+                <label asp-for="FechaInicio">Fecha Inicio</label>
+                <input asp-for="FechaInicio" type="date" class="form-control">
+                <span asp-validation-for="FechaInicio" class="text-danger"></span>
+            </div>
+            <div class="form-inputs mb-3">
+                <label asp-for="FechaFin">Fecha Fin</label>
+                <input asp-for="FechaFin" type="date" class="form-control">
+                <span asp-validation-for="FechaFin" class="text-danger"></span>
+            </div>
+            <div class="form-inputs mb-3">
+                <label asp-for="ImageFile">Imagen</label>
+                <input asp-for="ImageFile" accept="image/*" class="form-control">
+                <span asp-validation-for="ImageFile" class="text-danger"></span>
+            </div>
+             <div class="form-inputs">
+                <img decoding="async" src="@("~/images/uploads/"+Model.PathImagen)" asp-append-version="true" width="150px" height="150px"/>
+            </div>
+            <button class="btn btn-primary px-4 mt-4" type="submit">Guardar</button>
+        </div>
+    </div>
+</form>

@@ -19,7 +19,15 @@ namespace ZodiacMe.BD
         {
 
         }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            new DbInitializerRol(modelBuilder).Seed();
+        }
+
         public virtual DbSet<Usuario> Usuarios { get; set; }
-        public virtual DbSet<Rol>  Rols { get; set; }
+        public virtual DbSet<Rol> Rols { get; set; }
+        public virtual DbSet<Signo> Signos { get; set; }
+        public virtual DbSet<Pareja> Parejas { get; set; }
     }
 }

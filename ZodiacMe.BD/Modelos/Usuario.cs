@@ -18,8 +18,9 @@ namespace ZodiacMe.BD.Modelos
         [Required]
         public string Email { get; set; }
         [Required]
-        public string Password { get; set; }
-
+        public byte[] Password_hash { get; set; }
+        [Required]
+        public byte[] Password_salt { get; set; }
         public byte RolId { get; set; }
         public Rol Rol { get; set; }
 

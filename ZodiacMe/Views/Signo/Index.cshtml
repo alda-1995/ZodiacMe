@@ -1,0 +1,54 @@
+﻿@model IEnumerable<ZodiacMe.BD.ViewModels.ListaSignosViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/AdminLTE/_Layout.cshtml";
+}
+
+<div class="py-4">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nombre)
+                </th>
+                <th>
+                    Imagen
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FechaInicio)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FechaFin)
+                </th>
+                <th>
+                    <a class="btn btn-outline-success" asp-action="Crear" asp-controller="Signo"><i class="fa fa-plus-square"></i> Agregar</a>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(model => item.Nombre)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => item.PathImagen)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => item.FechaInicio)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => item.FechaFin)
+                    </td>
+                    <td>
+                        <a asp-action="Actualizar" asp-route-id="@item.SignoId"><i class="fa fa-marker fa-lg"></i></a>
+                        <a asp-action="Delete" asp-route-id="@item.SignoId" class="text-danger ml-1"
+                                          onclick="return confirm('¿Está seguro que desea eliminar este signo?')"><i class="fa fa-trash-alt fa-lg"></i></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

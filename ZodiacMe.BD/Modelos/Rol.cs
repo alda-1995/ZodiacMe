@@ -11,7 +11,7 @@ namespace ZodiacMe.BD.Modelos
     {
         public byte RolId { get; set; }
         [Required]
-        public string Descripcion { get; set; }
+        public string Nombre { get; set; }
         public ICollection<Usuario> Usuarios { get; set; }
     }
 }

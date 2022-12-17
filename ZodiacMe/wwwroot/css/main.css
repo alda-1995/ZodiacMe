@@ -32,13 +32,13 @@ img {
   max-width: 100%;
 }
 
-nav {
+.nav-main-page {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
 }
-nav .inner-nav {
+.nav-main-page .inner-nav {
   height: 80px;
   display: flex;
   align-items: center;
@@ -46,21 +46,21 @@ nav .inner-nav {
   /* Large and up */
 }
 @media screen and (min-width: 64em) {
-  nav .inner-nav {
+  .nav-main-page .inner-nav {
     height: 100px;
   }
 }
-nav .logo-zodiac {
+.nav-main-page .logo-zodiac {
   width: 90px;
   height: 80px;
   display: inline-block;
 }
-nav .logo-zodiac svg {
+.nav-main-page .logo-zodiac svg {
   width: 100%;
   height: 100%;
   fill: #ffffff;
 }
-nav .logo-zodiac svg g {
+.nav-main-page .logo-zodiac svg g {
   fill: #ffffff;
 }
 
@@ -434,9 +434,15 @@ p {
   align-items: center;
   justify-content: center;
 }
-.login-container .form-container {
+
+.form-container {
   width: 500px;
   background-color: #ffffff;
   padding: 2rem;
   border-radius: 20px;
+}
+
+.form-general {
+  padding: 2rem;
+  max-width: 500px;
 }

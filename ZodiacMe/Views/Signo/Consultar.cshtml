@@ -1,0 +1,29 @@
+﻿@model ZodiacMe.BD.ViewModels.SignoConsultaViewModel;
+
+@{
+    ViewData["Title"] = "Consultar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="fondo-total" style="background-image: url('~/images/zodiac/fondo2.png');">
+</div>
+<div class="float-constelacion">
+    <img src="~/images/zodiac/constelacion.png" alt="">
+</div>
+<div class="float-img">
+    <img src="~/images/zodiac/icon-amigable.png" alt="">
+</div>
+<div class="content-global">
+    <div class="formulario-consulta">
+        <div class="grid-container">
+            <div class="form-principal">
+                <form method="post" asp-controller="Signo" class="form-input">
+                    <h3 class="title-formulario">Completa los siguientes campos</h3>
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-inputs mb-3">
+                    </div>
+                    <button type="submit" class="button-blue">Consultar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
