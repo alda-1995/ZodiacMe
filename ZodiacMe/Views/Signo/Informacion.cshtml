@@ -1,0 +1,60 @@
+﻿@model ZodiacMe.BD.ViewModels.SignoEditViewModel;
+@{
+    ViewData["Title"] = "Informacion";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="fondo-total" style="background-image: url('img/fondo2.png');">
+</div>
+<div class="float-constelacion">
+    <img src="img/constelacion.png" alt="">
+</div>
+<div class="float-img">
+    <img src="img/icon-amigable.png" alt="">
+</div>
+<div class="content-global">
+    <div class="grid-container">
+        <div class="detalle-horoscopo">
+            <div class="button-back">
+                <a asp-action="Consultar" asp-controller="Signo" class="font-input link-blue">Regresar</a>
+            </div>
+            <div class="header-horoscopo">
+                <div class="circle-icon">
+                    <img src="~/images/uploads/@Model.PathImagen" alt="acuario">
+                </div>
+                <h2 class="title-horoscopo">@Model.Nombre</h2>
+            </div>
+            <h4>Descripcion:</h4>
+            <div class="text-horoscopo">
+                <p>@Model.Descripcion</p>
+            </div>
+            @*<div class="compatibilidad-grid">
+                <p class="title-compatibilidad-general font-title-general">Signos compatibles con Acuario</p>
+                <div class="grid-row">
+                    <div class="row-compatibilidad">
+                        <div class="content-row">
+                            <div class="icon-signo">
+                                <img src="img/taurus.png" alt="">
+                            </div>
+                            <p class="title-compatibilidad">Capricornio</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="compatibilidad-grid">
+                <p class="title-compatibilidad-general font-title-general">Pareja perfecta</p>
+                <div class="grid-row">
+                    <div class="row-compatibilidad">
+                        <div class="content-row">
+                            <div class="icon-signo">
+                                <img src="img/gemini.png" alt="">
+                            </div>
+                            <p class="title-compatibilidad">Géminis</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="p-pink">Estos signos de aire nacieron para estar juntos. Acuario y Géminis tienen una conexión psicológica que los hace comprender lo que piensa o siente el otro. Son signos individualistas, por lo que se entienden y suelen respetar su espacio. Son solidarios, empáticos, disfrutan el tiempo juntos y suelen vivir experiencias inolvidables.</p>
+            </div>*@
+        </div>
+    </div>
+</div>

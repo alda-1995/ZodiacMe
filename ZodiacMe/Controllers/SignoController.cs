@@ -94,11 +94,22 @@ namespace ZodiacMe.Controllers
                 var signoId = await _signo.ConsultaSignoNacimiento(fechaSigno);
                 if (signoId != Guid.Empty && signoId != null)
                 {
-                    return RedirectToAction("Index", "Signo");
+                    return RedirectToAction("Informacion", "Signo", new { @id = signoId });
                 }
             }
             ModelState.AddModelError("", "No se encontraron resultados.");
             return View(signoConsultaViewModel);
         }
+
+        public async Task<IActionResult> Informacion(string? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            var signo = await _signo.ObtieneSigno(Guid.Parse(id));
+            return View(signo);
+        }
+
     }
 }
