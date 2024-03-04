@@ -1,0 +1,19 @@
+﻿@model ZodiacMe.BD.ViewModels.SignoEditViewModel;
+
+@{
+    ViewData["Title"] = "Resultado";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-global">
+    <div class="grid-container">
+        <div class="content-resultado">
+            <h3 class="title-resultado">Tu resultado se muestra a continuación:</h3>
+            <div class="img-signo">
+                <img src="~/images/uploads/@Model.PathImagen" alt="">
+            </div>
+            <h2 class="title-signo">@Model.Nombre</h2>
+            <a asp-controller="Signo" asp-action="Informacion" asp-route-id="@Model.SignoId" class="font-input link-blue">Conocer más detalles</a>
+        </div>
+    </div>
+</div>

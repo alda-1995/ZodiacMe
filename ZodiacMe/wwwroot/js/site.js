@@ -19,3 +19,11 @@ function addDias(diasTotales) {
         }));
     }
 }
+
+// Initialize Editor
+$('.textarea-editor').summernote({
+    height: 300, // set editor height
+    minHeight: 400, // set minimum height of editor
+    maxHeight: 400, // set maximum height of editor
+    focus: true // set focus to editable area after initializing summernote
+});

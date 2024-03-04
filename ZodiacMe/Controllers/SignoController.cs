@@ -94,7 +94,7 @@ namespace ZodiacMe.Controllers
                 var signoId = await _signo.ConsultaSignoNacimiento(fechaSigno);
                 if (signoId != Guid.Empty && signoId != null)
                 {
-                    return RedirectToAction("Informacion", "Signo", new { @id = signoId });
+                    return RedirectToAction("Resultado", "Signo", new { @id = signoId });
                 }
             }
             ModelState.AddModelError("", "No se encontraron resultados.");
@@ -110,6 +110,14 @@ namespace ZodiacMe.Controllers
             var signo = await _signo.ObtieneSigno(Guid.Parse(id));
             return View(signo);
         }
-
+        public async Task<IActionResult> Resultado(string? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            var signo = await _signo.ObtieneSigno(Guid.Parse(id));
+            return View(signo);
+        }
     }
 }
